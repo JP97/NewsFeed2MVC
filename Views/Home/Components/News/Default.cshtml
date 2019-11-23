@@ -1,0 +1,26 @@
+﻿@model IEnumerable<NewsFeed2MVC.Models.News>
+@{
+    ViewData["Title"] = "Most recent News";
+}
+
+<h1>Most recent News</h1>
+
+
+<div>
+    @foreach(News n in Model)
+    {
+    <div>
+        <ul style="padding:0; margin:0; list-style:none">
+            <li>
+                <div>@n.Title</div>
+                <div>@n.Author</div>
+                <div>@n.CreatedDate</div>
+                <div>@n.Content</div>
+                <div>@n.HashTags</div>
+            </li>
+        </ul>
+    </div>
+
+    }
+</div>
+
